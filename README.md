@@ -13,7 +13,7 @@
 **Flawiya Shirish More**  
 MSc Geographic Data Science — University of Liverpool, 2026
 
-[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://flawiyaShirishMore.github.io/Africa-Drought-Study/)
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://flawiya.github.io/mapping-resilience-deserts-ssa/)
 
 </div>
 
@@ -38,9 +38,13 @@ This study integrates multi-decadal soil moisture reanalysis data with spatial a
 
 The interactive bivariate Resilience Desert map is available as a free web application:
 
-👉 **[Open Dashboard](https://flawiyaShirishMore.github.io/Africa-Drought-Study/)** ← GitHub Pages
+👉 **[Open Dashboard](https://flawiya.github.io/mapping-resilience-deserts-ssa/)** ← GitHub Pages
 
 *(If the link is not yet active, open `07_dashboard/index.html` locally in any browser.)*
+
+![Dashboard Screenshot](outputs/figures/dashboard_screenshot.png)
+
+*Bivariate dashboard showing the 3×3 Drought Risk × Market Isolation matrix, 354 maize-dominant districts across Sub-Saharan Africa, with per-country filtering and cross-border access highlighting. Toggle individual bivariate cells to isolate specific risk-access combinations.*
 
 ---
 
@@ -234,7 +238,8 @@ If you use this code or data in your research, please cite:
              Catchment Models to Map Resilience Deserts in Africa},
   school  = {University of Liverpool},
   year    = {2026},
-  type    = {MSc Dissertation, Geographic Data Science}
+  type    = {MSc Dissertation, Geographic Data Science},
+  url     = {https://github.com/flawiya/mapping-resilience-deserts-ssa}
 }
 ```
 
