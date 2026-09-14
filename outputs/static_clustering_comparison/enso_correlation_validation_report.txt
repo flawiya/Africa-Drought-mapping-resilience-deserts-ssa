@@ -1,0 +1,38 @@
+============================================================
+MULTI-METHOD CLUSTERING ELBOW ANALYSIS (PURE WEATHER DATA)
+============================================================
+
+--- K-Means ---
+  K=2: Silhouette = 0.1787
+  K=3: Silhouette = 0.2509 | Jump: +0.0722 <--- MAJOR ELBOW
+  K=4: Silhouette = 0.2689 | Jump: +0.0180
+  K=5: Silhouette = 0.2582 | Jump: -0.0107
+
+--- Standard Hierarchical ---
+  K=2: Silhouette = 0.1937
+  K=3: Silhouette = 0.2487 | Jump: +0.0550 <--- MAJOR ELBOW
+  K=4: Silhouette = 0.2598 | Jump: +0.0112
+  K=5: Silhouette = 0.2862 | Jump: +0.0263
+
+--- Spatial Hierarchical ---
+  K=2: Silhouette = 0.1921
+  K=3: Silhouette = 0.2487 | Jump: +0.0566 <--- MAJOR ELBOW
+  K=4: Silhouette = 0.2681 | Jump: +0.0194
+  K=5: Silhouette = 0.2781 | Jump: +0.0100
+
+============================================================
+ENSO CORRELATION ANALYSIS (SPATIAL HIERARCHICAL K=3)
+============================================================
+
+--- Cluster 1 (High Vulnerability) ---
+  Pearson r:  +0.4723 (p-value: 0.0171)
+  Spearman r: +0.4951 (p-value: 0.0119)
+  >>> STATISTICALLY SIGNIFICANT CORRELATION DETECTED <<<
+
+--- Cluster 2 (Moderate Vulnerability) ---
+  Pearson r:  +0.1345 (p-value: 0.5217)
+  Spearman r: +0.1828 (p-value: 0.3819)
+
+--- Cluster 3 (Low Vulnerability) ---
+  Pearson r:  -0.1423 (p-value: 0.4974)
+  Spearman r: -0.0740 (p-value: 0.7251)

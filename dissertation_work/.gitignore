@@ -1,0 +1,14 @@
+# Ignore raw data (too big for GitHub)
+data/
+*.csv
+*.shp
+*.dbf
+*.prj
+
+# Ignore huge output files (over 100MB)
+*Drought_Map.html
+
+# Ignore Python environment
+.venv/
+__pycache__/
+.DS_Store

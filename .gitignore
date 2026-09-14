@@ -1,0 +1,83 @@
+# ─── Large geospatial & binary data files ────────────────────────────────────
+*.shp
+*.gpkg
+*.zip
+*.parquet
+*.tif
+*.dbf
+*.sbn
+*.sbx
+*.shx
+*.prj
+*.cpg
+*.msi
+
+# ─── Large CSVs (raw timeseries & master data) ───────────────────────────────
+data/
+*.csv
+
+# Exception: allow small processed CSVs/GeoJSONs in outputs/data/
+!outputs/data/*.csv
+!outputs/data/*.geojson
+
+# ─── Secrets ──────────────────────────────────────────────────────────────────
+.env
+*.env.local
+
+# ─── Python environment & cache ───────────────────────────────────────────────
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ─── Meeting work folders (not part of clean published repo) ──────────────────
+dissertation_work/
+
+# ─── Dissertation documents ───────────────────────────────────────────────────
+*.docx
+*.doc
+~$*.docx
+*.pdf
+*.pptx
+
+# ─── HTML dashboards (except the deployed one in 07_dashboard/) ───────────────
+*.html
+!07_dashboard/index.html
+
+# ─── Audit / scratch scripts at root level ────────────────────────────────────
+scratch_audit_full.py
+deep_reference_audit.py
+print_summary.py
+sanitise_and_copy.py
+verify_repo.py
+generate_readmes.py
+audit_results.json
+full_reference_audit.json
+parsed_refs.json
+unique_in_text.json
+
+# ─── Temporary / check images at root level ───────────────────────────────────
+check_*.jpg
+check_*.png
+temp_*.jpg
+temp_*.png
+thumb_*.jpg
+fig4_*.png
+inspect_*.png
+ref_*.jpg
+kmeans.jpg
+spatial_k3_cluster_map.jpg
+static_categorical_sfca_comparison_annotated.jpg
+test_poi_map_annotated.jpg
+district_centroids.txt
+pdf_pages_2_3.txt
+scratch_*.txt
+
+# ─── OS system files ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
