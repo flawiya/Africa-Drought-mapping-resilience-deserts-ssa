@@ -10,7 +10,7 @@ import json
 import shutil
 
 # =============================================================================
-# 0. MASTER CONFIGURATION
+# 0. MAIN CONFIGURATION
 # =============================================================================
 # Change this to: "africa", "ethiopia", or "zambia" to run different parts
 RUN_MODE = "ethiopia" 

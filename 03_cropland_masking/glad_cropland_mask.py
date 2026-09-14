@@ -95,7 +95,7 @@ elif 'ISO3_y' in final_gdf.columns:
 # In[8]:
 
 
-# Calculate the master scale based on all 3,500+ districts in Africa
+# Calculate the overall scale based on all 3,500+ districts in Africa
 # This value stays the same for every map you generate from now on
 GLOBAL_VMAX = final_gdf['crop_pct'].quantile(0.95)
 GLOBAL_CMAP = 'YlGn' # Yellow-to-Green (Clean & Professional)

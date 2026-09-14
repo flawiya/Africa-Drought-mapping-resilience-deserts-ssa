@@ -2,7 +2,7 @@
 ssi_lib.py — Shared SSI Computation & Drought Analysis Utilities
 =================================================================
 Extracted from Week_11_correlation_map.py to provide a clean,
-reproducible API for the dissertation pipeline.
+reproducible API for the analysis pipeline.
 
 Functions:
   - compute_daily_gamma_ssi     — Full Gamma-CDF SSI (AghaKouchak 2014)

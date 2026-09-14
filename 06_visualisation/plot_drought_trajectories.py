@@ -13,10 +13,14 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-RESULTS_CSV = (PROJECT / "dissertation_work" / "meeting_25_june" /
-               "final_clustering_comparison_zones" / "final_spatial_clusters.csv")
-OUTPUT_DIR  = PROJECT / "dissertation_work" / "meeting_25_june" / "outputs"
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR  = PROJECT_ROOT / "outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+_csv = DATA_DIR / "final_spatial_clusters.csv"
+if not _csv.exists():
+    _csv = OUTPUT_DIR / "final_spatial_clusters.csv"
+RESULTS_CSV = _csv
 
 df = pd.read_csv(RESULTS_CSV)
 year_cols = [c for c in df.columns if c.startswith("drought_days_")]

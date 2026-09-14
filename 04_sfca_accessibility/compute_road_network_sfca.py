@@ -2,8 +2,8 @@
 compute_road_network_sfca.py
 
 Computes both 2SFCA and 3SFCA using the actual OSRM road network distance matrix.
-Only computes for 50km (vehicle) threshold as per user request.
-Saves outputs to the meeting_03_july folder.
+Only computes for 50km (vehicle) threshold.
+Saves outputs to the outputs directory.
 """
 
 import pandas as pd
@@ -12,10 +12,11 @@ import geopandas as gpd
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-DISTRICTS = (PROJECT / "dissertation_work" / "meeting_18" / "outputs" /
-             "consolidated_results" / "final_dissertation_district.shp")
-INPUT_CSV = PROJECT / "dissertation_work" / "meeting_26_june" / "outputs" / "network_distance_matrix.csv"
-OUTPUT_DIR = PROJECT / "dissertation_work" / "meeting_03_july" / "outputs"
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+DISTRICTS = DATA_DIR / "final_study_district.shp"
+INPUT_CSV = DATA_DIR / "network_distance_matrix.csv"
 
 BETA = 1.5  # Inverse-power distance decay parameter
 D_MAX_M = 50_000.0

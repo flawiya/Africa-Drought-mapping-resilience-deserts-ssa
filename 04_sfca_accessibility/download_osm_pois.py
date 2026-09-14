@@ -16,9 +16,9 @@ from shapely.geometry import Point, shape
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-AFRICA_SHP   = PROJECT / "data" / "africa_admx.shp"
-OUTPUT_DIR   = PROJECT / "dissertation_work" / "meeting_25_june" / "outputs"
-SCRATCH_DIR  = PROJECT / "dissertation_work" / "meeting_25_june" / "scratch"
+AFRICA_SHP   = PROJECT_ROOT / "data" / "africa_admx.shp"
+OUTPUT_DIR   = PROJECT_ROOT / "outputs"
+SCRATCH_DIR  = OUTPUT_DIR / "scratch"
 SCRATCH_DIR.mkdir(parents=True, exist_ok=True)
 
 SCRATCH_JSON = SCRATCH_DIR / "pois_download_scratch.json"
@@ -41,7 +41,7 @@ ENDPOINTS = [
 ]
 
 HEADERS = {
-    "User-Agent": "Africa-Drought-Study-Global/2.0 (dissertation research)",
+    "User-Agent": "Africa-Drought-Study-Global/2.0 (academic research)",
     "Accept":     "application/json",
 }
 

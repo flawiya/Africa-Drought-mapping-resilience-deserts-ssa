@@ -1,8 +1,0 @@
-Custom Spatially-Constrained Clustering Run Summary
-====================================================
-Config: K_MAX=3, SPATIAL_NEIGHBORS=10, LAMBDA=0.1
-Auto-selected K: 3
-
-G1: 119 districts | Avg Annual Drought Days: 20.4
-G2: 134 districts | Avg Annual Drought Days: 6.4
-G3: 101 districts | Avg Annual Drought Days: 20.1

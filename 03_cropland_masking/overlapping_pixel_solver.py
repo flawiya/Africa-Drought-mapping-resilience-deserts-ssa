@@ -47,7 +47,7 @@ PROJECT_ROOT = next(p for p in current_path.parents if (p / "data").exists())
 DATA_DIR = PROJECT_ROOT / "data"
 
 # Standardize Output Directory
-OUTPUT_DIR = PROJECT_ROOT / "dissertation_work" / "outputs" / "overlap_analysis"
+OUTPUT_DIR = PROJECT_ROOT / "outputs" / "overlap_analysis"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # Correct Path to your GADM data
@@ -420,7 +420,7 @@ def assign_geoglam_weighted(districts, geoglam):
 # ===========================================================================
 def generate_quality_report(districts_with_quality, output_dir=None):
     """
-    Generate the figures and tables for the dissertation results chapter.
+    Generate the figures and tables for the research results chapter.
 
     Figure 1: Map of district quality classes (High/Medium/Low)
     Figure 2: Distribution of pct_full_pixels across districts

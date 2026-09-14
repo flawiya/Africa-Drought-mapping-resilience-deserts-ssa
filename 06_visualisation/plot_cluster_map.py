@@ -10,10 +10,14 @@ from pathlib import Path
 
 # Paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-MEETING_25_DIR = PROJECT_ROOT / "dissertation_work" / "meeting_25_june"
-OUTPUT_DIR = MEETING_25_DIR / "outputs"
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-SHP_FILE = OUTPUT_DIR / "final_dissertation_district.shp"
+
+_shp = DATA_DIR / "final_study_district.shp"
+if not _shp.exists():
+    _shp = OUTPUT_DIR / "final_study_district.shp"
+SHP_FILE = _shp
 
 MAP_PNG = OUTPUT_DIR / "refined_361_hierarchical_k3_map.png"
 MAP_HTML = OUTPUT_DIR / "refined_361_hierarchical_k3_map.html"

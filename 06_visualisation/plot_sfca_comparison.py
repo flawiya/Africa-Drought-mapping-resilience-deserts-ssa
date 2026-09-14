@@ -9,9 +9,14 @@ import matplotlib.colors as mcolors
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-OUTPUT_DIR = PROJECT / "dissertation_work" / "meeting_03_july" / "outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 
-gdf_sfca = gpd.read_file(OUTPUT_DIR / "districts_road_network_sfca.gpkg")
+DATA_DIR = PROJECT_ROOT / "data"
+
+_gpkg = DATA_DIR / "districts_road_network_sfca.gpkg"
+if not _gpkg.exists():
+    _gpkg = OUTPUT_DIR / "districts_road_network_sfca.gpkg"
+gdf_sfca = gpd.read_file(_gpkg)
 
 def classify_quantile(series, n_classes=5):
     mask = series > 0

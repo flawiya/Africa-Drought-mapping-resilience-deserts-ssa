@@ -13,8 +13,14 @@ import seaborn as sns
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-OUTPUT_DIR = PROJECT / "dissertation_work" / "meeting_03_july" / "outputs"
-INPUT_GPKG = OUTPUT_DIR / "districts_road_network_sfca_50km.gpkg"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+DATA_DIR = PROJECT_ROOT / "data"
+
+_gpkg = DATA_DIR / "districts_road_network_sfca_50km.gpkg"
+if not _gpkg.exists():
+    _gpkg = OUTPUT_DIR / "districts_road_network_sfca_50km.gpkg"
+INPUT_GPKG = _gpkg
 
 # Load Data
 print("Loading accessibility data...")

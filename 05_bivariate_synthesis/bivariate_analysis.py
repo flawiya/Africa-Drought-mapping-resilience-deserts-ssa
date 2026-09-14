@@ -11,11 +11,15 @@ from pathlib import Path
 
 # Setup paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-MEETING_DIR = PROJECT_ROOT / "dissertation_work" / "meeting_25_june"
-OUTPUT_DIR = MEETING_DIR / "outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+DATA_DIR = PROJECT_ROOT / "data"
 
 # Inputs
-ACCESSIBILITY_GEOJSON = OUTPUT_DIR / "refined_354_districts_with_accessibility.geojson"
+_geojson = OUTPUT_DIR / "refined_354_districts_with_accessibility.geojson"
+if not _geojson.exists():
+    _geojson = DATA_DIR / "refined_354_districts_with_accessibility.geojson"
+ACCESSIBILITY_GEOJSON = _geojson
 
 # Outputs
 BIVARIATE_CSV = OUTPUT_DIR / "bivariate_food_insecurity_analysis.csv"

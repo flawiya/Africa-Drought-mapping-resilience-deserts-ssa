@@ -9,12 +9,11 @@ from pathlib import Path
 # Setup paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
 DATA_DIR = PROJECT_ROOT / "data"
-MEETING_DIR = PROJECT_ROOT / "dissertation_work" / "meeting_25_june"
-OUTPUT_DIR = MEETING_DIR / "outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 
 # Inputs
-DISTRICTS_LIST_CSV = PROJECT_ROOT / "dissertation_work" / "meeting_18" / "outputs" / "consolidated_results" / "refined_361_districts_list.csv"
-SHP_FILE = PROJECT_ROOT / "dissertation_work" / "meeting_18" / "outputs" / "consolidated_results" / "final_dissertation_district.shp"
+SHP_FILE = DATA_DIR / "final_study_district.shp"
+DISTRICTS_LIST_CSV = DATA_DIR / "refined_361_districts_list.csv"
 CLASSIFIED_POIS_CSV = OUTPUT_DIR / "africa_354_classified_pois.csv"
 
 # Outputs
@@ -75,7 +74,7 @@ def main():
     
     # Verify input files
     for path, name in [(DISTRICTS_LIST_CSV, "Districts List"), 
-                       (SHP_FILE, "Final Dissertation Shapefile"), 
+                       (SHP_FILE, "Study Districts Shapefile"), 
                        (CLASSIFIED_POIS_CSV, "Classified POIs CSV")]:
         if not path.exists():
             print(f"[ERROR] Missing required file: {name} at {path}")

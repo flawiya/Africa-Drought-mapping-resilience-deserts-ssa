@@ -12,7 +12,7 @@
 *.cpg
 *.msi
 
-# ─── Large CSVs (raw timeseries & master data) ───────────────────────────────
+# ─── Large CSVs (raw timeseries & reference data) ───────────────────────────
 data/
 *.csv
 
@@ -34,10 +34,16 @@ __pycache__/
 dist/
 build/
 
-# ─── Meeting work folders (not part of clean published repo) ──────────────────
+# ─── Working & legacy folders (not part of published repo) ───────────────────
 dissertation_work/
+core_analysis/
+data_acquisition/
+utils/
+create_dirs.ps1
+dissertation_body_text.txt
+.vscode/
 
-# ─── Dissertation documents ───────────────────────────────────────────────────
+# ─── Document files ───────────────────────────────────────────────────────────
 *.docx
 *.doc
 ~$*.docx

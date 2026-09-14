@@ -17,9 +17,14 @@ import matplotlib.patches as mpatches
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-GDF_PATH   = (PROJECT / "dissertation_work" / "meeting_25_june" /
-              "outputs" / "districts_2sfca_accessibility.gpkg")
-OUTPUT_DIR = PROJECT / "dissertation_work" / "meeting_25_june" / "outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+DATA_DIR = PROJECT_ROOT / "data"
+
+_gpkg = DATA_DIR / "districts_2sfca_accessibility.gpkg"
+if not _gpkg.exists():
+    _gpkg = OUTPUT_DIR / "districts_2sfca_accessibility.gpkg"
+GDF_PATH = _gpkg
 
 gdf = gpd.read_file(GDF_PATH).to_crs("EPSG:4326")
 

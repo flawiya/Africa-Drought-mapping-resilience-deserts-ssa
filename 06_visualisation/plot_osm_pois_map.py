@@ -20,9 +20,18 @@ from folium.plugins import MarkerCluster
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-OUTPUT_DIR = PROJECT_ROOT / "dissertation_work" / "meeting_25_june" / "outputs"
-SHP_FILE = OUTPUT_DIR / "final_dissertation_district.shp"
-POI_CSV = OUTPUT_DIR / "africa_354_classified_pois.csv"
+DATA_DIR = PROJECT_ROOT / "data"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
+
+_shp = DATA_DIR / "final_study_district.shp"
+if not _shp.exists():
+    _shp = OUTPUT_DIR / "final_study_district.shp"
+SHP_FILE = _shp
+
+_poi_csv = DATA_DIR / "africa_354_classified_pois.csv"
+if not _poi_csv.exists():
+    _poi_csv = OUTPUT_DIR / "africa_354_classified_pois.csv"
+POI_CSV = _poi_csv
 
 MAP_HTML = OUTPUT_DIR / "pois_on_districts_map.html"
 MAP_PNG  = OUTPUT_DIR / "pois_on_districts_map.png"

@@ -15,8 +15,16 @@ import geopandas as gpd
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-GPKG_PATH   = PROJECT / "dissertation_work" / "meeting_25_june" / "outputs" / "districts_2sfca_accessibility.gpkg"
-OUT_HTML    = PROJECT / "dissertation_work" / "meeting_25_june" / "outputs" / "bivariate_dashboard.html"
+OUTPUT_DIR   = PROJECT_ROOT / "outputs"
+
+DATA_DIR     = PROJECT_ROOT / "data"
+
+_gpkg = DATA_DIR / "districts_2sfca_accessibility.gpkg"
+if not _gpkg.exists():
+    _gpkg = OUTPUT_DIR / "districts_2sfca_accessibility.gpkg"
+GPKG_PATH = _gpkg
+
+OUT_HTML = PROJECT_ROOT / "07_dashboard" / "index.html"
 
 if not GPKG_PATH.exists():
     print(f"Error: {GPKG_PATH} does not exist. Run script_03 first.")

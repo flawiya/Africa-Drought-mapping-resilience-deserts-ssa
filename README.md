@@ -133,7 +133,7 @@ Africa-Drought-Study/
 ├── 03_cropland_masking/               ← GLAD 30m cropland intersection + pixel solver
 ├── 04_sfca_accessibility/             ← OSM POI download, 2SFCA & 3SFCA computation
 ├── 05_bivariate_synthesis/            ← Spatial clustering + bivariate DRI×Isolation
-├── 06_visualisation/                  ← All dissertation figures (Figures 2–8)
+├── 06_visualisation/                  ← Publication figures (Figures 2–8)
 ├── 07_dashboard/                      ← Interactive web dashboard (GitHub Pages)
 │   └── index.html                     ← ← LIVE DASHBOARD — open in browser
 │
@@ -167,8 +167,8 @@ The following large datasets must be **downloaded separately** and placed in the
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/FlawiyaShirishMore/Africa-Drought-Study.git
-cd Africa-Drought-Study
+git clone https://github.com/flawiya/mapping-resilience-deserts-ssa.git
+cd mapping-resilience-deserts-ssa
 
 # 2. Create and activate a conda environment (recommended)
 conda create -n drought_study python=3.10
@@ -205,7 +205,7 @@ python 04_sfca_accessibility/compute_road_network_sfca.py
 python 05_bivariate_synthesis/spatial_clustering.py
 python 05_bivariate_synthesis/bivariate_analysis.py
 
-# Step 6: Generate all dissertation figures
+# Step 6: Generate publication figures
 python 06_visualisation/plot_drought_trajectories.py
 python 06_visualisation/plot_cluster_map.py
 python 06_visualisation/plot_sfca_comparison.py
@@ -232,14 +232,13 @@ python 07_dashboard/build_bivariate_dashboard.py
 If you use this code or data in your research, please cite:
 
 ```bibtex
-@mastersthesis{more2026resilience,
-  author  = {More, Flawiya Shirish},
-  title   = {Integrating Standardised Soil Moisture Index (SSI) and Floating
-             Catchment Models to Map Resilience Deserts in Africa},
-  school  = {University of Liverpool},
-  year    = {2026},
-  type    = {MSc Dissertation, Geographic Data Science},
-  url     = {https://github.com/flawiya/mapping-resilience-deserts-ssa}
+@misc{more2026resilience,
+  author       = {More, Flawiya Shirish},
+  title        = {Integrating Standardised Soil Moisture Index (SSI) and Floating
+                  Catchment Models to Map Resilience Deserts in Africa},
+  year         = {2026},
+  howpublished = {Geographic Data Science, University of Liverpool},
+  url          = {https://github.com/flawiya/mapping-resilience-deserts-ssa}
 }
 ```
 
@@ -249,6 +248,7 @@ If you use this code or data in your research, please cite:
 
 This project is licensed under the **MIT Licence** — see [`LICENSE`](LICENSE) for details.
 
-The dissertation text and figures are the intellectual property of the author.  
+The research text and figures are the intellectual property of the author.  
 OSM data: © OpenStreetMap contributors (ODbL).  
 ERA5-Land data: © ECMWF, Copernicus Climate Change Service.
+

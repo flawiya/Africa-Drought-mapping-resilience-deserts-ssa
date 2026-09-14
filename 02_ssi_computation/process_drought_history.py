@@ -1,6 +1,6 @@
 # %% [markdown]
 # # African Maize Drought Analysis: Gamma-SSI Pipeline
-# MSc Geographic Data Science Dissertation -- University of Liverpool, 2026
+# MSc Geographic Data Science -- University of Liverpool, 2026
 # 
 # **Author:** Flawiya Shirish More  
 # **Date:** May 21, 2026  

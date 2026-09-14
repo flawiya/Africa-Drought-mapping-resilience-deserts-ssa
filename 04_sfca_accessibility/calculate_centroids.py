@@ -4,10 +4,10 @@ from pathlib import Path
 
 # Setup paths
 PROJECT_ROOT = Path(__file__).resolve().parent.parent  # repo root
-OUTPUT_DIR = PROJECT_ROOT / "dissertation_work" / "meeting_25_june" / "outputs"
+OUTPUT_DIR = PROJECT_ROOT / "outputs"
 DATA_DIR = PROJECT_ROOT / "data"
 
-SHP_PATH = OUTPUT_DIR / "final_dissertation_district.shp"
+SHP_PATH = DATA_DIR / "final_study_district.shp"
 
 def main():
     print("--- STARTING CENTROID CALCULATION ---")
@@ -36,20 +36,21 @@ def main():
     print("\nSample calculated centroids:")
     print(gdf[["COUNTRY", "ADM_NAME", "cent_lon", "cent_lat"]].head(10))
     
-    # Overwrite the shapefile in outputs
-    print(f"\nSaving updated shapefile to {SHP_PATH}...")
-    gdf.to_file(SHP_PATH)
-    print("[SUCCESS] Shapefile updated in outputs.")
+    # Save updated shapefile
+    out_shp = OUTPUT_DIR / "final_study_district.shp"
+    print(f"\nSaving updated shapefile to {out_shp}...")
+    gdf.to_file(out_shp)
+    print("[SUCCESS] Shapefile saved to outputs.")
     
     # Copy to data folder to keep in sync
     print(f"Copying updated shapefile files to {DATA_DIR}...")
     for ext in ["shp", "shx", "dbf", "prj", "cpg"]:
-        src = OUTPUT_DIR / f"final_dissertation_district.{ext}"
-        dst = DATA_DIR / f"final_dissertation_district.{ext}"
+        src = OUTPUT_DIR / f"final_study_district.{ext}"
+        dst = DATA_DIR / f"final_study_district.{ext}"
         if src.exists():
             shutil.copy(src, dst)
             
-    print("[SUCCESS] Centroid calculation and file syncing completed.")
+    print("[SUCCESS] Centroid calculation completed.")
 
 if __name__ == "__main__":
     main()
