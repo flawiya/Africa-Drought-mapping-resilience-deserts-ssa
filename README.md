@@ -13,7 +13,7 @@
 **Flawiya Shirish More**  
 MSc Geographic Data Science — University of Liverpool, 2026
 
-[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://flawiya.github.io/mapping-resilience-deserts-ssa/)
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://flawiya.github.io/Africa-Drought-mapping-resilience-deserts-ssa/)
 
 </div>
 
@@ -38,7 +38,7 @@ This study integrates multi-decadal soil moisture reanalysis data with spatial a
 
 The interactive bivariate Resilience Desert map is available as a free web application:
 
-👉 **[Open Dashboard](https://flawiya.github.io/mapping-resilience-deserts-ssa/)** ← GitHub Pages
+👉 **[Open Dashboard](https://flawiya.github.io/Africa-Drought-mapping-resilience-deserts-ssa/)** ← GitHub Pages
 
 *(If the link is not yet active, open `07_dashboard/index.html` locally in any browser.)*
 
@@ -167,8 +167,8 @@ The following large datasets must be **downloaded separately** and placed in the
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/flawiya/mapping-resilience-deserts-ssa.git
-cd mapping-resilience-deserts-ssa
+git clone https://github.com/flawiya/Africa-Drought-mapping-resilience-deserts-ssa.git
+cd Africa-Drought-mapping-resilience-deserts-ssa
 
 # 2. Create and activate a conda environment (recommended)
 conda create -n drought_study python=3.10
@@ -238,7 +238,7 @@ If you use this code or data in your research, please cite:
                   Catchment Models to Map Resilience Deserts in Africa},
   year         = {2026},
   howpublished = {Geographic Data Science, University of Liverpool},
-  url          = {https://github.com/flawiya/mapping-resilience-deserts-ssa}
+  url          = {https://github.com/flawiya/Africa-Drought-mapping-resilience-deserts-ssa}
 }
 ```
 
