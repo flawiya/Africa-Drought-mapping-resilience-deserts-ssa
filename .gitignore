@@ -16,9 +16,14 @@
 data/
 *.csv
 
-# Exception: allow small processed CSVs/GeoJSONs in outputs/data/
-!outputs/data/*.csv
-!outputs/data/*.geojson
+# Exception: allow small processed CSVs/GeoJSONs in outputs/data/ and publication figures
+!outputs/figures/
+!outputs/figures/*
+!outputs/data/
+!outputs/data/*
+outputs/*
+!outputs/figures/
+!outputs/data/
 
 # ─── Secrets ──────────────────────────────────────────────────────────────────
 .env
