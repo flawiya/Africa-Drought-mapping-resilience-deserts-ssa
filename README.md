@@ -11,7 +11,7 @@
 ![ERA5](https://img.shields.io/badge/ERA5--Land-ECMWF-0072CE?style=for-the-badge)
 
 **Flawiya Shirish More**  
-MSc Geographic Data Science — University of Liverpool, 2026
+MSc Geographic Data Science - University of Liverpool, 2026
 
 [![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://flawiya.github.io/Africa-Drought-mapping-resilience-deserts-ssa/)
 
@@ -30,7 +30,7 @@ This study integrates multi-decadal soil moisture reanalysis data with spatial a
 1. **Develop a multi-threshold SSI framework** to quantify agricultural drought severity across Sub-Saharan Africa's maize-dominant districts (2000-2025).
 2. **Apply an Enhanced 3SFCA model** to map spatial accessibility to three categories of food system infrastructure: Agricultural Supply, Financial Services, and Post-Harvest Logistics.
 3. **Produce a bivariate Resilience Desert classification** that jointly maps drought risk and market isolation at district level.
-4. **Identify priority intervention zones** — districts where both dimensions compound - to inform climate-adaptive food security policy.
+4. **Identify priority intervention zones** - districts where both dimensions compound - to inform climate-adaptive food security policy.
 
 ---
 
@@ -77,7 +77,7 @@ A 30 m GLAD cropland raster was spatially intersected with GAUL Level-2 district
 A Three-Step Floating Catchment Area (3SFCA) model was applied using 48,890 OpenStreetMap POIs (Agricultural Supply, Financial Services, Post-Harvest Logistics), downloaded via the Overpass API. Physical travel impedance was computed using OSRM across two catchment sizes: **5 km walking** and **50 km driving**. The 3SFCA corrects the supply-side competition bias inherent in the baseline 2SFCA by adding a third normalisation step.
 
 ### §3.5 — Bivariate Resilience Desert Synthesis
-Normalised DRI* and normalised 3SFCA Market Isolation (I* = 1 − A*) were jointly classified into a **3×3 bivariate matrix**. Districts with DRI* ≥ 0.67 AND I* ≥ 0.67 are designated **Resilience Deserts** — the double-burden class where climate stress and market isolation compound simultaneously.
+Normalised DRI* and normalised 3SFCA Market Isolation (I* = 1 - A*) were jointly classified into a **3×3 bivariate matrix**. Districts with DRI* ≥ 0.67 AND I* ≥ 0.67 are designated **Resilience Deserts** - the double-burden class where climate stress and market isolation compound simultaneously.
 
 ---
 
@@ -93,13 +93,13 @@ Spatially-constrained hierarchical clustering (Ward linkage + spatial contiguity
 | **Moderate Vulnerability** | 101 (28.5%) | 28.1 days/yr | Medium |
 | **Low Vulnerability** | 134 (37.8%) | 9.4 days/yr | Variable |
 
-ENSO-driven anomaly spikes (2002, 2015–2016, 2023) are clearly visible in the high-vulnerability cluster trajectory.
+ENSO-driven anomaly spikes (2002, 2015-2016, 2023) are clearly visible in the high-vulnerability cluster trajectory.
 
 ![Figure 3 — Spatial Clusters](outputs/figures/Figure3_Spatial_K3_Clusters_300dpi.png)
 
 ### Finding 2 — 39 Zero-Access Food Deserts (5 km Walking Catchment)
 
-The 3SFCA model identified **39 districts with Ai = 0** — complete physical isolation from all three infrastructure categories within a 5 km walking catchment. These districts span 9 countries and represent the most acute infrastructural exclusion in the dataset. The 3SFCA systematically deflated scores relative to the baseline 2SFCA (median shift: −0.18), exposing supply-side competition invisible to the simpler model.
+The 3SFCA model identified **39 districts with Ai = 0** - complete physical isolation from all three infrastructure categories within a 5 km walking catchment. These districts span 9 countries and represent the most acute infrastructural exclusion in the dataset. The 3SFCA systematically deflated scores relative to the baseline 2SFCA (median shift: −0.18), exposing supply-side competition invisible to the simpler model.
 
 ![Figure 4 — 2SFCA vs 3SFCA](outputs/figures/Figure4_2SFCA_vs_3SFCA_Comparison_300dpi.png)
 
@@ -114,7 +114,7 @@ The 3SFCA model identified **39 districts with Ai = 0** — complete physical is
 
 ## 💡 Conclusion
 
-The bivariate Resilience Desert framework reveals a dimension of food system vulnerability that neither climate nor accessibility analysis captures alone. The 118 double-burden districts — concentrated in the Sahel, Horn of Africa, and Southern African Plateau — face a compounding risk that existing food security indices systematically underestimate. The 39 zero-access districts present the most tractable intervention targets, as infrastructure investment in those locations would move districts from the highest-risk bivariate class. Policymakers seeking to prioritise climate-adaptive food system investments should treat the Resilience Desert classification as a spatial triage tool rather than a categorical outcome.
+The bivariate Resilience Desert framework reveals a dimension of food system vulnerability that neither climate nor accessibility analysis captures alone. The 118 double-burden districts - concentrated in the Sahel, Horn of Africa, and Southern African Plateau - face a compounding risk that existing food security indices systematically underestimate. The 39 zero-access districts present the most tractable intervention targets, as infrastructure investment in those locations would move districts from the highest-risk bivariate class. Policymakers seeking to prioritise climate-adaptive food system investments should treat the Resilience Desert classification as a spatial triage tool rather than a categorical outcome.
 
 ---
 
