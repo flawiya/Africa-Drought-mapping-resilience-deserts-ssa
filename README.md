@@ -21,16 +21,16 @@ MSc Geographic Data Science — University of Liverpool, 2026
 
 ## 📖 Abstract
 
-This study integrates multi-decadal soil moisture reanalysis data with spatial accessibility modelling to identify **Resilience Deserts** — districts simultaneously exposed to severe agricultural drought *and* isolated from the market infrastructure needed to cope with it. Across 354 maize-dominant districts in 21 Sub-Saharan African countries (2000–2025), a novel Drought Risk Index (DRI) derived from the Standardised Soil Moisture Index (SSI) is co-registered with an Enhanced Three-Step Floating Catchment Area (3SFCA) accessibility model to produce a bivariate resilience mapping framework. The analysis identifies **118 Resilience Desert districts** (33.2% of the study area) where high drought exposure and market isolation compound simultaneously — a spatial vulnerability pattern that neither climate nor accessibility analysis alone can reveal.
+This study integrates multi-decadal soil moisture reanalysis data with spatial accessibility modelling to identify **Resilience Deserts** - districts simultaneously exposed to severe agricultural drought *and* isolated from the market infrastructure needed to cope with it. Across 354 maize-dominant districts in 21 Sub-Saharan African countries (2000-2025), a novel Drought Risk Index (DRI) derived from the Standardised Soil Moisture Index (SSI) is co-registered with an Enhanced Three-Step Floating Catchment Area (3SFCA) accessibility model to produce a bivariate resilience mapping framework. The analysis identifies **118 Resilience Desert districts** (33.2% of the study area) where high drought exposure and market isolation compound simultaneously - a spatial vulnerability pattern that neither climate nor accessibility analysis alone can reveal.
 
 ---
 
 ## 🎯 Research Objectives
 
-1. **Develop a multi-threshold SSI framework** to quantify agricultural drought severity across Sub-Saharan Africa's maize-dominant districts (2000–2025).
+1. **Develop a multi-threshold SSI framework** to quantify agricultural drought severity across Sub-Saharan Africa's maize-dominant districts (2000-2025).
 2. **Apply an Enhanced 3SFCA model** to map spatial accessibility to three categories of food system infrastructure: Agricultural Supply, Financial Services, and Post-Harvest Logistics.
 3. **Produce a bivariate Resilience Desert classification** that jointly maps drought risk and market isolation at district level.
-4. **Identify priority intervention zones** — districts where both dimensions compound — to inform climate-adaptive food security policy.
+4. **Identify priority intervention zones** — districts where both dimensions compound - to inform climate-adaptive food security policy.
 
 ---
 
