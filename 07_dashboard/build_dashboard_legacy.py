@@ -441,8 +441,8 @@ input[type=range]{{flex:1;accent-color:var(--accent);cursor:pointer;height:4px}}
   <select id="ctySel"><option value="all">All Countries</option></select>
   <label>Basemap:</label>
   <select id="bmSel">
-    <option value="dark">CartoDB Dark</option>
-    <option value="positron">CartoDB Light</option>
+    <option value="dark">Esri Dark Gray</option>
+    <option value="positron">Esri Light Gray</option><option value="osm">OpenStreetMap</option><option value="sat">Esri Satellite</option><option value="ter">Esri Topographic</option>
   </select>
 </header>
 
@@ -517,8 +517,8 @@ const YEARS = Array.from({{length:26}},(_,i)=>2000+i);
 const RC = {{'Low Vulnerability':'#1b8a43','Moderate Vulnerability':'#c07a00','High Vulnerability':'#b81d18','Unknown':'#58a6ff'}};
 const FLAGS = {{'Angola':'&#127462;&#127476;','Burundi':'&#127463;&#127470;','Central African Republic':'&#127464;&#127467;','Democratic Republic of the Congo':'&#127464;&#127465;','Egypt':'&#127466;&#127468;','Ethiopia':'&#127466;&#127481;','Ghana':'&#127468;&#127469;','Kenya':'&#127472;&#127466;','Madagascar':'&#127474;&#127468;','Malawi':'&#127474;&#127484;','Mozambique':'&#127474;&#127487;','Namibia':'&#127475;&#127462;','Nigeria':'&#127475;&#127468;','Rwanda':'&#127479;&#127484;','South Africa':'&#127487;&#127462;','South Sudan':'&#127480;&#127480;','Swaziland':'&#127480;&#127487;','Tanzania':'&#127481;&#127487;','Uganda':'&#127482;&#127468;','Zambia':'&#127487;&#127474;','Zimbabwe':'&#127487;&#127484;'}};
 const BM = {{
-  dark:'https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png',
-  positron:'https://{{s}}.basemaps.cartocdn.com/light_all/{{z}}/{{x}}/{{y}}{{r}}.png',
+  dark:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{{z}}/{{y}}/{{x}}',
+  positron:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{{z}}/{{y}}/{{x}}',
   sat:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{{z}}/{{y}}/{{x}}',
   ter:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{{z}}/{{y}}/{{x}}',
   osm:'https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png'
@@ -543,7 +543,7 @@ let selCty='all', selCls='all', hidden=new Set(), hiddenPOI=new Set(), yr=2025, 
 let showPOI=true;
 
 const map = L.map('map',{{zoomControl:true}}).setView([0,25],4);
-tile = L.tileLayer(BM.dark,{{attribution:'CARTO/OSM',maxZoom:18}}).addTo(map);
+tile = L.tileLayer(BM.dark,{{attribution:'&copy; Esri &middot; &copy; OpenStreetMap contributors',maxZoom:18}}).addTo(map);
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 buildClist(); buildCtySel(); render(); buildPOILayer(); buildPOICats();
@@ -750,7 +750,7 @@ function togCluster(n){{
 }}
 document.getElementById('bmSel').addEventListener('change',e=>{{
   if(tile) map.removeLayer(tile);
-  tile=L.tileLayer(BM[e.target.value],{{attribution:'Esri/CARTO/OSM',maxZoom:18}}).addTo(map);
+  tile=L.tileLayer(BM[e.target.value],{{attribution:'&copy; Esri &middot; &copy; OpenStreetMap contributors',maxZoom:18}}).addTo(map);
   tile.bringToBack();
 }});
 
