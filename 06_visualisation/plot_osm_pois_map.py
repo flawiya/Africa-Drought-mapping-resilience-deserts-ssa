@@ -103,8 +103,7 @@ def main():
     m = folium.Map(
         location=[center_lat, center_lon],
         zoom_start=4,
-        tiles="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        attr="Tiles &copy; Esri",
+        tiles="CartoDB positron",
     )
 
     # 3a. District choropleth layer -------------------------------------

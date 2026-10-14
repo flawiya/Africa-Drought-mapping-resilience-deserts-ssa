@@ -108,8 +108,7 @@ def main():
         legend=True,
         tooltip=["COUNTRY", "ADM_NAME", "cluster_label", "maize_pct"],
         popup=True,
-        tiles="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-        attr="Tiles &copy; Esri"
+        tiles="CartoDB positron"
     )
     
     m.save(MAP_HTML)

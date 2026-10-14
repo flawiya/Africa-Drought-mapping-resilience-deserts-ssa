@@ -296,8 +296,8 @@ aside{
   </select>
   <label>Basemap:</label>
   <select id="bmSel">
-    <option value="dark">Esri Dark Gray</option>
-    <option value="positron">Esri Light Gray</option><option value="osm">OpenStreetMap</option><option value="sat">Esri Satellite</option><option value="ter">Esri Topographic</option>
+    <option value="dark">CartoDB Dark</option>
+    <option value="positron">CartoDB Light</option>
   </select>
 </header>
 
@@ -368,8 +368,8 @@ const GJ = {"type":"FeatureCollection","features":[{"id":"0","type":"Feature","p
 const YEARS = Array.from({length:26},(_,i)=>2000+i);
 const FLAGS = {'Angola':'&#127462;&#127476;','Burundi':'&#127463;&#127470;','Central African Republic':'&#127464;&#127467;','Democratic Republic of the Congo':'&#127464;&#127465;','Egypt':'&#127466;&#127468;','Ethiopia':'&#127466;&#127481;','Ghana':'&#127468;&#127469;','Kenya':'&#127472;&#127466;','Madagascar':'&#127474;&#127468;','Malawi':'&#127474;&#127484;','Mozambique':'&#127474;&#127487;','Namibia':'&#127475;&#127462;','Nigeria':'&#127475;&#127468;','Rwanda':'&#127479;&#127484;','South Africa':'&#127487;&#127462;','South Sudan':'&#127480;&#127480;','Swaziland':'&#127480;&#127487;','Tanzania':'&#127481;&#127487;','Uganda':'&#127482;&#127468;','Zambia':'&#127487;&#127474;','Zimbabwe':'&#127487;&#127484;'};
 const BM = {
-  dark:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
-  positron:'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+  dark:'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  positron:'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
   sat:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
   ter:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
   osm:'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
@@ -401,7 +401,7 @@ let selCty = "all";
 let mapLayer = null, tileLayer = null, chart = null;
 
 const map = L.map('map', {zoomControl:true}).setView([0,25],4);
-tileLayer = L.tileLayer(BM.dark, {attribution:'&copy; Esri &middot; &copy; OpenStreetMap contributors',maxZoom:18}).addTo(map);
+tileLayer = L.tileLayer(BM.dark, {attribution:'CARTO/OSM',maxZoom:18}).addTo(map);
 
 // ── Boot ──────────────────────────────────────────────────────────────────────
 buildClist();
@@ -546,7 +546,7 @@ document.getElementById("distSel").addEventListener("change", e => {
 // Palette selector removed
 document.getElementById("bmSel").addEventListener("change", e => {
   if (tileLayer) map.removeLayer(tileLayer);
-  tileLayer = L.tileLayer(BM[e.target.value], {attribution: '&copy; Esri &middot; &copy; OpenStreetMap contributors', maxZoom: 18}).addTo(map);
+  tileLayer = L.tileLayer(BM[e.target.value], {attribution: 'CARTO/OSM/Esri', maxZoom: 18}).addTo(map);
   tileLayer.bringToBack();
 });
 document.getElementById("cbHighlight").addEventListener("change", e => {
